@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.cards {
+  height: 100vh;
+  padding: 6rem 7rem;
+}
+.full {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  min-width: 424px;
+  /*padding: 6rem 7rem;*/
+}
+.information {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+}
+.information .information-img-txt {
+  background-color: hsl(246, 80%, 60%);
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 20px;
+  /*height: 50vh;
+  max-height: 50vh;*/
+}
+.information .information-img-txt img {
+  width: 6rem;
+}
+.information-img-txt .text-info {
+  margin: 2.5rem 0;
+  color: #fff;
+  width: 10rem;
+}
+.text {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+.text-name {
+  text-transform: capitalize;
+  line-height: 1.2s;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.menu {
+  width: 100%;
+  height: 195px;
+  background-color: hsl(235, 46%, 20%);
+  padding: 1.5rem;
+  position: relative;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.menu li {
+  list-style: none;
+  padding: 10px 0;
+}
+.menu li a {
+  color: hsl(235, 45%, 61%);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+.menu li a:hover {
+  color: #fff;
+}
+a.active {
+  color: #fff !important;
+}
+
+.cards-daily {
+  width: auto;
+  height: 525px;
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card-activity {
+  margin-left: 30px;
+  /*background: hsl(236, 54%, 58%);*/
+  background: hsl(145, 58%, 55%);
+  border-radius: 20px;
+}
+.card-activity .img {
+  position: relative;
+  height: 20%;
+  padding: 0px 0 0 10px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card-activity .img img {
+  width: 70px;
+  float: right;
+  margin-top: -10px;
+  margin-right: 20px;
+}
+.card-activity .content {
+  background: hsl(235, 46%, 20%);
+  height: 80%;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.card-activity .content:hover {
+  cursor: pointer;
+  background: hsl(236, 43%, 38%);
+}
+
+.content .activity {
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.content .current {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+.content .previous {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    padding: 0rem 0rem;
+    height: auto;
+  }
+  .full {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 7rem 1rem;
+  }
+  .information {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: hsl(235, 46%, 20%);
+  }
+  .information .information-img-txt {
+    background-color: hsl(246, 80%, 60%);
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    /*height: 50vh;
+    max-height: 50vh;*/
+  }
+  .information .information-img-txt img {
+    width: 6rem;
+  }
+  .information-img-txt .text-info {
+    margin: 2.5rem 1rem;
+    color: #fff;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-weight: 200;
+  }
+  .text-name {
+    text-transform: capitalize;
+    line-height: 1.2s;
+    font-weight: 400;
+    font-size: 1.8rem;
+    width: 220px;
+  }
+  .menu {
+    width: 100%;
+    height: auto;
+    background-color: hsl(235, 46%, 20%);
+    padding: 1rem 3rem;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+
+  .cards-daily {
+    margin-top: 2rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .card-activity {
+    margin-left: 0px;
+    /*background: hsl(236, 54%, 58%);*/
+    background: hsl(145, 58%, 55%);
+    border-radius: 20px;
+  }
+}
